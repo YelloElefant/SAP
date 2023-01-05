@@ -15,13 +15,13 @@ namespace Inventory
   {
     public static bool isConected = false;
     private static MySqlConnection connection;
-    private static string server;
-    private static string database;
-    private static string user;
-    private static string password;
-    private static string port;
-    private static string connectionString;
-    private static string sslM;
+    private static string? server;
+    private static string? database;
+    private static string? user;
+    private static string? password;
+    private static string? port;
+    private static string? connectionString;
+    private static string? sslM;
 
 
 
@@ -50,6 +50,8 @@ namespace Inventory
         catch (MySqlException ex)
         {
           isConected = false;
+          Console.WriteLine(ex.Code);
+          
            
         }
     }
