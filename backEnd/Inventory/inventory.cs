@@ -54,12 +54,12 @@ namespace Inventory
         }
     }
 
-    public static void Add(int word)
+    public static void Add(string word)
     {
-      string query = $"insert into PHP.Inventory (product) values ({word})";
+      string query = $"insert into PHP.Inventory (product) values ('{word}')";
       MySqlCommand cmd = new MySqlCommand(query, connection);
       var reader = cmd.ExecuteReader();
-        
+      reader.Read();
       reader.Close();
       
 

@@ -57,7 +57,7 @@ namespace form
 
         public void insert_Click(object sender, RoutedEventArgs e)
         {
-            Inventory.Inventory.Add(Int32.Parse(txt.Text));
+            Inventory.Inventory.Add(txt.Text);
         }
     }
 }
