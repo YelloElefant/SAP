@@ -26,14 +26,38 @@ namespace form
         public MainWindow()
         {
             InitializeComponent();
-            display();
+            login();
         }
 
-        public void display()
+        public void login()
         {
-            Number.Content = Inventory.Inventory.Write();
+           Inventory.Inventory.Login();
+           Status.Content = "Waiting";
+           
         }
 
+        public void conect_Click(object sender, RoutedEventArgs e)
+        {
+            Inventory.Inventory.conexion();
+            if (Inventory.Inventory.isConected == true)
+            {
+                Status.Content = "conected";
+            }
+            else if (Inventory.Inventory.isConected == false)
+            {
+                Status.Content = "failed";
+            }
+        }
 
+        public void disconect_Click(object sender, RoutedEventArgs e)
+        {
+            Inventory.Inventory.disConect();
+            Status.Content = "disconected";
+        }
+
+        public void insert_Click(object sender, RoutedEventArgs e)
+        {
+            Inventory.Inventory.Add(Int32.Parse(txt.Text));
+        }
     }
 }

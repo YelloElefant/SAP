@@ -22,3 +22,10 @@ C:\Users\YelloElefant\OneDrive\Coding\SAP\frontEnd\form\obj\Debug\net7.0-windows
 C:\Users\YelloElefant\OneDrive\Coding\SAP\frontEnd\form\bin\Debug\net7.0-windows\Inventory.dll
 C:\Users\YelloElefant\OneDrive\Coding\SAP\frontEnd\form\bin\Debug\net7.0-windows\Inventory.pdb
 C:\Users\YelloElefant\OneDrive\Coding\SAP\frontEnd\form\obj\Debug\net7.0-windows\form.csproj.CopyComplete
+C:\Users\YelloElefant\OneDrive\Coding\SAP\frontEnd\form\bin\Debug\net7.0-windows\Google.Protobuf.dll
+C:\Users\YelloElefant\OneDrive\Coding\SAP\frontEnd\form\bin\Debug\net7.0-windows\K4os.Compression.LZ4.dll
+C:\Users\YelloElefant\OneDrive\Coding\SAP\frontEnd\form\bin\Debug\net7.0-windows\K4os.Compression.LZ4.Streams.dll
+C:\Users\YelloElefant\OneDrive\Coding\SAP\frontEnd\form\bin\Debug\net7.0-windows\K4os.Hash.xxHash.dll
+C:\Users\YelloElefant\OneDrive\Coding\SAP\frontEnd\form\bin\Debug\net7.0-windows\MySql.Data.dll
+C:\Users\YelloElefant\OneDrive\Coding\SAP\frontEnd\form\bin\Debug\net7.0-windows\ZstdNet.dll
+C:\Users\YelloElefant\OneDrive\Coding\SAP\frontEnd\form\bin\Debug\net7.0-windows\BouncyCastle.Crypto.dll

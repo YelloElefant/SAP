@@ -7,7 +7,11 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <Label x:Name="Number" Content="Label" Margin="131,82,426,284"/>
+        <Label x:Name="Status" Content="Label" Margin="131,82,426,284"/>
+        <Button x:Name="conect" Content="Conect" Margin="483,73,177,275" Click="conect_Click"/>
+        <Button x:Name="disconect" Content="Disconect" Margin="483,201,177,147" Click="disconect_Click"/>
+        <TextBox x:Name="txt" TextWrapping="Wrap" Text="TextBox" Width="120" Margin="104,183,576,190"/>
+        <Button x:Name="insert" Content="Add" Margin="94,268,566,80" Click="insert_Click"/>
 
     </Grid>
 </Window>
