@@ -1,0 +1,12 @@
+C:\Users\YelloElefant\OneDrive\Coding\SAP\backEnd\Inventory\bin\Debug\net7.0\Inventory.deps.json
+C:\Users\YelloElefant\OneDrive\Coding\SAP\backEnd\Inventory\bin\Debug\net7.0\Inventory.dll
+C:\Users\YelloElefant\OneDrive\Coding\SAP\backEnd\Inventory\bin\Debug\net7.0\Inventory.pdb
+C:\Users\YelloElefant\OneDrive\Coding\SAP\backEnd\Inventory\obj\Debug\net7.0\Inventory.csproj.AssemblyReference.cache
+C:\Users\YelloElefant\OneDrive\Coding\SAP\backEnd\Inventory\obj\Debug\net7.0\Inventory.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\YelloElefant\OneDrive\Coding\SAP\backEnd\Inventory\obj\Debug\net7.0\Inventory.AssemblyInfoInputs.cache
+C:\Users\YelloElefant\OneDrive\Coding\SAP\backEnd\Inventory\obj\Debug\net7.0\Inventory.AssemblyInfo.cs
+C:\Users\YelloElefant\OneDrive\Coding\SAP\backEnd\Inventory\obj\Debug\net7.0\Inventory.csproj.CoreCompileInputs.cache
+C:\Users\YelloElefant\OneDrive\Coding\SAP\backEnd\Inventory\obj\Debug\net7.0\Inventory.dll
+C:\Users\YelloElefant\OneDrive\Coding\SAP\backEnd\Inventory\obj\Debug\net7.0\refint\Inventory.dll
+C:\Users\YelloElefant\OneDrive\Coding\SAP\backEnd\Inventory\obj\Debug\net7.0\Inventory.pdb
+C:\Users\YelloElefant\OneDrive\Coding\SAP\backEnd\Inventory\obj\Debug\net7.0\ref\Inventory.dll
