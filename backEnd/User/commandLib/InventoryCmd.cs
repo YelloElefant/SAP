@@ -16,11 +16,11 @@ namespace User.commandLib
             {
                 case "start":
 
-                    Inventory.Inventory.Start();
+                    Inventory.Core.MySqlClass.Start();
                     Console.WriteLine($"database {Inventory.Inventory.isConected}");
                     break;
                 case "stop":
-                    Inventory.Inventory.Stop();
+                    Inventory.Core.MySqlClass.Stop();
                     Console.WriteLine("database disconected");
                     break;
                 default:
