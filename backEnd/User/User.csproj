@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk" DefaultTargets="Compile">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
@@ -6,11 +6,8 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
   </PropertyGroup>
-
   <ItemGroup>
-    <ProjectReference Include="..\Inventory\Inventory.csproj" />
+	  <Complie Include="./commandLib/InventoryCmd.cs"/>
+    <ProjectReference Include="../Inventory/Inventory.csproj" />
   </ItemGroup>
-  <Target Name="AfterBuild">
-    <Exec Command="echo hello"/>
-  </Target>
 </Project>
