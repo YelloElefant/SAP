@@ -5,13 +5,68 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:form"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        <Label x:Name="Status" Content="Label" Margin="131,82,426,284"/>
-        <Button x:Name="conect" Content="Conect" Margin="483,73,177,275" Click="conect_Click"/>
-        <Button x:Name="disconect" Content="Disconect" Margin="483,201,177,147" Click="disconect_Click"/>
-        <TextBox x:Name="txt" TextWrapping="Wrap" Text="TextBox" Width="120" Margin="104,183,576,190"/>
-        <Button x:Name="insert" Content="Add" Margin="94,268,566,80" Click="insert_Click"/>
+        Title="MainWindow" 
+        Height="1076" 
+        Width="1920" 
+        WindowStartupLocation="CenterScreen" 
+        WindowState="Maximized"
+        
+        ResizeMode="NoResize"
+        Background="Transparent"
+        AllowsTransparency="False">
 
-    </Grid>
+
+
+
+
+    <Border Background="#272537">
+        <Grid Width="1920" Height="1080">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="200">
+                </ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="300"/>
+            </Grid.RowDefinitions>
+            <Label 
+                x:Name="Status" 
+                Content="Label"/>
+            <StackPanel Grid.Row="1">
+            <TextBox
+                VerticalAlignment="Center"
+                HorizontalAlignment="Left"
+                Background="white"
+                Foreground="Black"
+                x:Name="txt" 
+                Text="TextBox" 
+                Width="200"
+                Height="50"/>
+                <Button
+                    Background="White"
+                    Foreground="Black"
+                    Height="50"
+                    x:Name="conect" 
+                    Content="Conect" 
+                    Click="conect_Click"/>
+                <Button 
+                    Background="White"
+                    Foreground="Black"
+                    Height="50"
+                    x:Name="disconect" 
+                    Content="Disconect" 
+                    Click="disconect_Click"/>
+                
+                <Button 
+                    Background="White"
+                    Foreground="Black"
+                    Height="50"
+                    x:Name="insert" 
+                    Content="Add" 
+                    Click="insert_Click"/>
+            </StackPanel>
+
+        </Grid>
+
+    </Border>
+
 </Window>

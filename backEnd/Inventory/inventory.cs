@@ -25,7 +25,9 @@ namespace Inventory
 
 
 
-
+    /// <summary>
+    /// creats and logs on to mysql server
+    /// </summary>
     public static void Login()
     {
       server = "192.168.1.34";
@@ -38,6 +40,9 @@ namespace Inventory
       connectionString = String.Format("server={0};port={1};user id={2}; password={3}; database={4}; SslMode={5}", server, port, user, password, database, sslM);
       connection = new MySqlConnection(connectionString);
     }
+    /// <summary>
+    /// opens conection to mysql server
+    /// </summary>
     public static void conexion()
     {
         try
@@ -55,7 +60,10 @@ namespace Inventory
            
         }
     }
-
+    /// <summary>
+    /// adds entry to database table
+    /// </summary>
+    /// <param name="word">value to add</param>
     public static void Add(string word)
     {
       string query = $"insert into PHP.Inventory (product) values ('{word}')";
@@ -68,7 +76,9 @@ namespace Inventory
 
 
     }
-
+    /// <summary>
+    /// closes the conection to mysql server
+    /// </summary>
     public static void disConect()
     {
       connection.Close();
