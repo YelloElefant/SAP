@@ -34,6 +34,3 @@ C:\Users\YelloElefant\OneDrive\Coding\SAP\backEnd\User\obj\Debug\net7.0\refint\U
 C:\Users\YelloElefant\OneDrive\Coding\SAP\backEnd\User\obj\Debug\net7.0\User.pdb
 C:\Users\YelloElefant\OneDrive\Coding\SAP\backEnd\User\obj\Debug\net7.0\User.genruntimeconfig.cache
 C:\Users\YelloElefant\OneDrive\Coding\SAP\backEnd\User\obj\Debug\net7.0\ref\User.dll
-C:\Users\YelloElefant\OneDrive\Coding\SAP\backEnd\User\bin\Debug\net7.0\Inventory.deps.json
-C:\Users\YelloElefant\OneDrive\Coding\SAP\backEnd\User\bin\Debug\net7.0\Inventory.runtimeconfig.json
-C:\Users\YelloElefant\OneDrive\Coding\SAP\backEnd\User\bin\Debug\net7.0\Inventory.exe

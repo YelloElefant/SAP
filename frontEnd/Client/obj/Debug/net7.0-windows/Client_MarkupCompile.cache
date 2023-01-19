@@ -1,20 +1,20 @@
 ﻿Client
-1.0.0.0
+
 
 winexe
 C#
 .cs
-c:\Users\YelloElefant\OneDrive\Coding\SAP\frontEnd\Client\obj\Debug\net7.0-windows\
+C:\Users\YelloElefant\OneDrive\Coding\SAP\frontEnd\Client\obj\Debug\net7.0-windows\
 Client
 none
 false
 TRACE;DEBUG;NET;NET7_0;NETCOREAPP
-c:\Users\YelloElefant\OneDrive\Coding\SAP\frontEnd\Client\App.xaml
+C:\Users\YelloElefant\OneDrive\Coding\SAP\frontEnd\Client\App.xaml
 11407045341
 
-6-1945543051
-206525346825
+4-437236290
+206-69156784
 MainWindow.xaml;
 
-True
+False
 

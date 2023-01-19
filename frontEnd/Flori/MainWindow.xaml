@@ -14,6 +14,6 @@
         Background="#ffdb01"
         
         >
-
+        <Label x:Name="output" Margin="514,451,621,361" FontSize="16"></Label>
     </Grid>
 </Window>
