@@ -12,11 +12,16 @@ namespace Inventory.Core
     {
         public static void StartServer()
         {
+            Byte[] ip = new byte[4] {192,168,1,34 };
+            
+
+
+
             // Get Host IP Address that is used to establish a connection
             // In this case, we get one IP address of localhost that is IP : 127.0.0.1
             // If a host has multiple addresses, you will get a list of addresses
-            IPHostEntry host = Dns.GetHostEntry("localhost");
-            IPAddress ipAddress = host.AddressList[0];
+            //IPHostEntry host = Dns.GetHostEntry("192.168.1.34");
+            IPAddress ipAddress = new IPAddress(ip);
             IPEndPoint localEndPoint = new IPEndPoint(ipAddress, 11000);
 
             try
@@ -34,8 +39,8 @@ namespace Inventory.Core
                 Socket handler = listener.Accept();
 
                 // Incoming data from the client.
-                string data = null;
-                byte[] bytes = null;
+                string? data = null;
+                byte[]? bytes = null;
 
                 while (true)
                 {
@@ -47,6 +52,10 @@ namespace Inventory.Core
                         break;
                     }
                 }
+
+
+
+
 
                 Console.WriteLine("Text received : {0}", data);
 

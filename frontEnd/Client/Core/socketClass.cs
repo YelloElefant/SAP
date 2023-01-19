@@ -2,86 +2,51 @@
 using System.Net;
 using System.Text;
 using System;
+using System.Threading.Tasks;
 
 namespace Core;
 public class SocketClass
 {
-    public static void ExecuteServer()
+    public static async Task ExecuteServerAsync()
     {
         // Establish the local endpoint
         // for the socket. Dns.GetHostName
         // returns the name of the host
         // running the application.
-        IPHostEntry ipHost = Dns.GetHostEntry(Dns.GetHostName());
-        IPAddress ipAddr = ipHost.AddressList[0];
-        IPEndPoint localEndPoint = new IPEndPoint(ipAddr, 11111);
+        Byte[] ip = new byte[4] { 192, 168, 1, 34 };
+
+        //IPHostEntry ipHost = Dns.GetHostEntry("192.168.1.34");
+        IPAddress ipAddr = new IPAddress(ip);
+        IPEndPoint localEndPoint = new IPEndPoint(ipAddr, 11000);
 
         // Creation TCP/IP Socket using
         // Socket Class Constructor
-        Socket listener = new Socket(ipAddr.AddressFamily,
-                     SocketType.Stream, ProtocolType.Tcp);
-
-        try
+        Socket client = new(localEndPoint.AddressFamily, SocketType.Stream, ProtocolType.Tcp);
+        await client.ConnectAsync(localEndPoint);
+        while (true)
         {
+            // Send message.
+            var message = "Hi friends 👋!<|EOM|>";
+            var messageBytes = Encoding.UTF8.GetBytes(message);
+            _ = await client.SendAsync(messageBytes, SocketFlags.None);
+            Console.WriteLine($"Socket client sent message: \"{message}\"");
 
-            // Using Bind() method we associate a
-            // network address to the Server Socket
-            // All client that will connect to this
-            // Server Socket must know this network
-            // Address
-            listener.Bind(localEndPoint);
-
-            // Using Listen() method we create
-            // the Client list that will want
-            // to connect to Server
-            listener.Listen(10);
-
-            while (true)
+            // Receive ack.
+            var buffer = new byte[1_024];
+            var received = await client.ReceiveAsync(buffer, SocketFlags.None);
+            var response = Encoding.UTF8.GetString(buffer, 0, received);
+            if (response == "<|ACK|>")
             {
-
-                Console.WriteLine("Waiting connection ... ");
-
-                // Suspend while waiting for
-                // incoming connection Using
-                // Accept() method the server
-                // will accept connection of client
-                Socket clientSocket = listener.Accept();
-
-                // Data buffer
-                byte[] bytes = new Byte[1024];
-                string data = null;
-
-                while (true)
-                {
-
-                    int numByte = clientSocket.Receive(bytes);
-
-                    data += Encoding.ASCII.GetString(bytes,
-                                               0, numByte);
-
-                    if (data.IndexOf("<EOF>") > -1)
-                        break;
-                }
-
-                Console.WriteLine("Text received -> {0} ", data);
-                byte[] message = Encoding.ASCII.GetBytes("Test Server");
-
-                // Send a message to Client
-                // using Send() method
-                clientSocket.Send(message);
-
-                // Close client Socket using the
-                // Close() method. After closing,
-                // we can use the closed Socket
-                // for a new Client Connection
-                clientSocket.Shutdown(SocketShutdown.Both);
-                clientSocket.Close();
+                Console.WriteLine(
+                    $"Socket client received acknowledgment: \"{response}\"");
+                break;
             }
+            // Sample output:
+            //     Socket client sent message: "Hi friends 👋!<|EOM|>"
+            //     Socket client received acknowledgment: "<|ACK|>"
         }
 
-        catch (Exception e)
-        {
-            Console.WriteLine(e.ToString());
-        }
+
+        
     }
 }

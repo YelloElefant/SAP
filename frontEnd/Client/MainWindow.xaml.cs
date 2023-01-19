@@ -30,7 +30,7 @@ namespace form
     public MainWindow()
     {
       InitializeComponent();
-      SocketClass.ExecuteServer();
+      SocketClass.ExecuteServerAsync();
       
 
     }

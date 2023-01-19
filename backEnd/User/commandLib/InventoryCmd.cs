@@ -15,16 +15,12 @@ namespace User.commandLib
             switch (userCmd[1]) 
             {
                 case "start":
-
-                    Inventory.Core.MySqlClass.Start();
-                    Console.WriteLine($"database {Inventory.Inventory.isConected}");
+                    Inventory.Core.SocketClass.StartServer();
                     break;
                 case "stop":
-                    Inventory.Core.MySqlClass.Stop();
-                    Console.WriteLine("database disconected");
+                    
                     break;
                 default:
-                    Console.WriteLine("");
                     break;
             }
         

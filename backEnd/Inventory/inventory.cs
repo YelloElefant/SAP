@@ -22,18 +22,15 @@ namespace Inventory
     public static void Main()
     {
         MySqlClass.Start();
-        SocketClass.StartServer();
     }
-
+    
     
 
 
 
 
-
-    /// <summary>
-    /// creats and logs on to mysql server
-    /// </summary>
+  
+   
     
 
     
