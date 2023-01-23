@@ -30,18 +30,17 @@ namespace form
     public MainWindow()
     {
       InitializeComponent();
-      SocketClass.ExecuteServerAsync();
+      //SocketClass.ExecuteServerAsync();
       
 
     }
 
-
-
-
-
-
-
-    
+    private void Button_Click(object sender, RoutedEventArgs e)
+    {
+      url.Text = "http://" + url.Text;
+      Uri uri= new Uri(url.Text);
+      brow.Navigate(uri); 
+    }
   }
 }
 

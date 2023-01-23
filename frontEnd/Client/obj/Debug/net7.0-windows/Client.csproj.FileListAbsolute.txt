@@ -29,6 +29,3 @@ C:\Users\YelloElefant\OneDrive\Coding\SAP\frontEnd\Client\obj\Debug\net7.0-windo
 C:\Users\YelloElefant\OneDrive\Coding\SAP\frontEnd\Client\obj\Debug\net7.0-windows\Client.pdb
 C:\Users\YelloElefant\OneDrive\Coding\SAP\frontEnd\Client\obj\Debug\net7.0-windows\Client.genruntimeconfig.cache
 C:\Users\YelloElefant\OneDrive\Coding\SAP\frontEnd\Client\obj\Debug\net7.0-windows\ref\Client.dll
-C:\Users\YelloElefant\OneDrive\Coding\SAP\frontEnd\Client\bin\Debug\net7.0-windows\User.deps.json
-C:\Users\YelloElefant\OneDrive\Coding\SAP\frontEnd\Client\bin\Debug\net7.0-windows\User.runtimeconfig.json
-C:\Users\YelloElefant\OneDrive\Coding\SAP\frontEnd\Client\bin\Debug\net7.0-windows\User.exe
