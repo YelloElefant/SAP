@@ -20,24 +20,21 @@
 
   <Border Background="#272537">
 
-    <Grid Width="1920" Height="1080">
+    <Canvas Width="1920" Height="1080">
 
-      <Grid.ColumnDefinitions>
-        <ColumnDefinition Width="132">
-        </ColumnDefinition>
-        <ColumnDefinition Width="68"/>
-      </Grid.ColumnDefinitions>
-      <Grid.RowDefinitions>
-        <RowDefinition Height="30"/>
-      </Grid.RowDefinitions>
+
+
+
       <Label Content="URL" Grid.ColumnSpan="2"/>
-      <TextBox x:Name="url" TextWrapping="Wrap" Grid.ColumnSpan="2" Margin="40,0,-224,0" Text="text"/>
-      <Button Content="GO" Margin="303,0,-312,0" Width="77" Grid.Column="1" Click="Button_Click" />
-      <WebBrowser x:Name="brow" Margin="0,60,-1720,-1050" Grid.ColumnSpan="2"/>
+      <TextBox x:Name="url" TextWrapping="Wrap" Text="text" Canvas.Left="36" Canvas.Top="4" HorizontalAlignment="Left" VerticalAlignment="Center" Width="332"/>
+      <Button Content="GO" Width="76"  Click="Button_Click" Canvas.Left="373" Canvas.Top="4" HorizontalAlignment="Left" VerticalAlignment="Center" />
+
+
+      <WebBrowser x:Name="brow" Source="https://google.com" Canvas.Top="45" HorizontalAlignment="Center" VerticalAlignment="Top" Width="1920" Height="1018"/>
 
 
 
-    </Grid>
+    </Canvas>
 
 
 

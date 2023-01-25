@@ -6,7 +6,4 @@
     <Nullable>enable</Nullable>
     <UseWPF>true</UseWPF>
   </PropertyGroup>
-  <ItemGroup>
-    <ProjectReference Include="../../backEnd/Inventory/Inventory.csproj" />
-  </ItemGroup>
 </Project>

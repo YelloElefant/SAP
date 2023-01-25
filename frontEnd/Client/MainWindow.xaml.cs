@@ -13,10 +13,11 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Windows.Threading;
-using Inventory;
 using System.Net;
 using System.Net.Sockets;
 using Core;
+using Client.Core;
+using System.Threading;
 
 namespace form
 {
@@ -30,16 +31,39 @@ namespace form
     public MainWindow()
     {
       InitializeComponent();
-      //SocketClass.ExecuteServerAsync();
-      
+      //SocketClassClient.ExecuteServerAsync();
+
 
     }
 
     private void Button_Click(object sender, RoutedEventArgs e)
     {
-      url.Text = "http://" + url.Text;
-      Uri uri= new Uri(url.Text);
-      brow.Navigate(uri); 
+      string[] methods = new String[2] { "http://", "https://" };
+      url.Text.Trim();
+      try
+      {
+
+        Uri uri = new Uri(url.Text);
+        brow.Navigate(uri);
+        url.Text = brow.Source.ToString();
+
+      }
+      catch (System.Exception)
+      {
+
+        if (url.Text.Contains("https://"))
+        {
+          var splitUrl = url.Text.Split('/');
+          var splitUrlString = splitUrl[1];
+          splitUrlString = methods[0] + splitUrlString;
+        }
+
+
+        Uri uri = new Uri(url.Text);
+        brow.Navigate(uri);
+
+      }
+
     }
   }
 }
